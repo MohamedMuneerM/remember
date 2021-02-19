@@ -1,0 +1,120 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'frontend/css/bootstrap/bootstrap.min.css' %}" type="text/css">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<nav class="navbar navbar-lg">
+			<a class="nav-item navbar-brand navbar-item nav-link" href="#">Remember</a>
+		</nav>
+
+
+	</header>
+	<main class="container">
+		<section class="row card-group">
+			
+				<div class="col-md-4">
+					<form method="POST">
+						{% csrf_token %}
+						<div class="card">
+							<div class="card-title">
+								<span class="lead">Free Tier</span>
+							</div>
+							<div class="card-body mb-4">
+								Generous free tier
+
+								<ul>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, corrupti.</li>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, corrupti.</li>
+									<li>Lorem ipsum dolor sit amet consectetur</li>
+								</ul>
+
+							</div>
+							<div class="card-footer">
+								<input type="hidden" name="plan" value="1">
+								<button type="submit" class="btn btn-md btn-outline-success">Avail</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			
+
+
+			
+				<div class="col-md-4">
+					<form method="POST">
+						{% csrf_token %}
+						<div class="card">
+							<div class="card-title">
+								<span class="lead">Standard Tier</span>
+							</div>
+							<div class="card-body mb-4">
+								Generous Super Charged Tier
+
+								<ul>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, corrupti.</li>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, corrupti.</li>
+									<li>Lorem ipsum dolor sit amet consectetur</li>
+								</ul>
+
+							</div>
+							<div class="card-footer">
+								<input type="hidden" name="plan" value="2">
+								<button type="submit" class="btn btn-md btn-outline-success">Avail</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			
+			
+			
+				<div class="col-md-4">
+					<form method="POST">
+						{% csrf_token %}
+						<div class="card">
+							<div class="card-title">
+								<span class="lead">Super Charged Tier</span>
+							</div>
+							<div class="card-body mb-4">
+								Generous Super Charged Tier
+
+								<ul>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, corrupti.</li>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</li>
+									<li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, corrupti.</li>
+									<li>Lorem ipsum dolor sit amet consectetur</li>
+								</ul>
+
+							</div>
+							<div class="card-footer">
+								<input type="hidden" name="plan" value="3">
+								<button type="submit" class="btn btn-md btn-outline-success">Avail</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			
+			
+		</section>
+	</main>
+
+
+<script>
+	 
+	 // const plan = new Vue(()=>{
+	 // 	el : '#app'
+	 // })
+
+</script>
+
+
+</body>
+</html>

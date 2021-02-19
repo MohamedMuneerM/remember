@@ -1,0 +1,90 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	 <!-- Vue2 CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+	<!-- Vuex CDN -->
+	<script src="https://unpkg.com/vuex@2.0.0"></script>
+	<!-- Favicon -->
+	<!-- <link rel="icon" href="../assets/img/brand/favicon.png" type="image/png"> -->
+	<!-- Fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+	<!-- Icons -->
+	<link rel="stylesheet" href="{% static 'frontend/vendor/nucleo/css/nucleo.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'frontend/css/bootstrap/bootstrap.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'frontend/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}" type="text/css">
+	<!-- Argon CSS -->
+	<link rel="stylesheet" href="{% static 'frontend/css/argon.min.css' %}" type="text/css">
+	<link rel="stylesheet" href="{% static 'frontend/css/custom.css' %}" type="text/css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css" integrity="sha256-DOS9W6NR+NFe1fUhEE0PGKY/fubbUCnOfTje2JMDw3Y=" crossorigin="anonymous" />
+
+</head>
+<body>
+	
+	<div id="root" class="">
+		{% include 'frontend/snippets/side_nav.html' %}
+		{% block content %}
+		{% endblock content %}
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- scripts -->
+
+	<script src="{% static 'frontend/vendor/jquery/dist/jquery.min.js' %}"></script>
+	<script src="{% static 'frontend/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+	<script src="{% static 'frontend/vendor/js-cookie/js.cookie.js' %}"></script>
+	<script src="{% static 'frontend/vendor/jquery.scrollbar/jquery.scrollbar.min.js' %}"></script>
+	<script src="{% static 'frontend/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js' %}"></script>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script> -->
+	<!-- <script>
+	$(function(){
+	   $('.datepicker').datepicker({
+	      format: 'dd-mm-yyyy'
+	  });
+	}); 
+	</script> -->
+
+	
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha256-FEqEelWI3WouFOo2VWP/uJfs1y8KJ++FLh2Lbqc8SJk=" crossorigin="anonymous"></script>
+		
+	</script>
+
+	
+
+	<!-- Argon JS -->
+	<script src="{% static 'frontend/js/argon.min.js' %}"></script>
+	<script src="{% static 'frontend/js/custom.js' %}"></script>
+
+	<script>
+		$(function () {
+		    $("#datetimepickernew").datetimepicker({
+		      format: 'Y-m-dThh:mm[:ss[.uuuuuu]][+HH:MM|-HH:MM|Z].',
+		    });
+		  });
+	</script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+</body>
+</html>

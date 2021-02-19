@@ -1,0 +1,84 @@
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="table-responsive" v-for="item in modalEdit" >
+          <h3 class="">Edit your Schedule</h3>
+          <div class="form-group">
+            <label for="exampleInputEmadfhdhil1">Title</label>
+            <input v-bind:value=[item.title] type="text" class="form-control" id="exampleInputEmadfhdhil1" aria-describedby="ssss">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+
+          </div>
+          <div class="form-group">
+              <label for="datetimepickernew">Date</label>
+              <div class="input-group">
+                  <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-calendar-grid-58"></i></span>
+                  </div>
+                  <input id="datetimepickernew" v-bind:value=[item.date] type="text" class="form-control" placeholder="Select date">
+              </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Message</label>
+            <textarea rows="5" v-bind:value=[item.message] class="form-control" id="exampleInputPassword1"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="inputState">Flair</label>
+            <select id="inputState" class="form-control">
+              <option selected>[[ item.flair ]]</option>
+              <option >birthday</option>
+              <option >anniversery</option>
+              <option >meeting</option>
+              <option >special day</option>
+              <option >other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="inputState">Medium</label>
+            <select id="inputState" class="form-control">
+              <option selected>[[ item.medium ]]</option>
+              <option>email</option>
+              <option >sms</option>
+              <option >both</option>
+            </select>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" v-bind:value="checked" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label"  for="exampleCheck1">Want to sent to more people?</label>
+          </div>
+          <!-- <div v-if="checked" class="d-inline">
+            <div class="form-group">
+              <a v-on:click="addField"  class="text-white btn btn-sm btn-success"><i class="fa fa-plus"></i></a>
+
+             <div>
+               <span>
+                <more-than-one-form  v-for="(credential, idx) in credentials" :key="'credential-' + idx" v-model="credentials[idx]" ></more-than-one-form>
+               </span>
+             </div>
+            </div> 
+          </div> -->
+          <!-- <button type="submit" @click="addEntry"  class="btn btn-primary">Submit</button> -->
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

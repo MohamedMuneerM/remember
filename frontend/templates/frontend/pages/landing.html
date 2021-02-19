@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'frontend/css/argon.css' %}" type="text/css">
+	<title>Remember!</title>
+</head>
+<body style="background-color: #eee;">
+	<div>
+		<h1>Remember SaaS</h1>
+		{% if request.user.is_authenticated %}
+			<h3>Hey {{ request.user.username }}</h3>
+		{% endif %}
+		<p>Don't forget important dates anymore!</p>
+		<span style="margin-top: 7px;">
+			<a href="{% url 'login' %}" style="text-align: center,margin-right: 10px;">Login</a>
+			<a href="{% url 'register' %}" style="text-align: center;">Register</a>
+			<a href="{% url 'frontend:dashboard' %}" style="text-align: center;">Dashboard</a>
+			<a href="{% url 'plans' %}" style="text-align: center;">Plans</a>
+		</span>
+	</div>
+</body>
+</html>
